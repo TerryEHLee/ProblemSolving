@@ -4,7 +4,7 @@
 
 ### 성능 요약
 
-메모리: 33.5 MB, 시간: 0.06 ms
+메모리: 33.5 MB, 시간: 0.25 ms
 
 ### 구분
 
@@ -23,8 +23,8 @@ Empty
 <h5>제한사항</h5>
 
 <ul>
-<li>1 ≤ a ≤ 100</li>
-<li>1 ≤ d ≤ 100</li>
+<li>1 ≤ <code>a</code> ≤ 100</li>
+<li>1 ≤ <code>d</code> ≤ 100</li>
 <li>1 ≤ <code>included</code>의 길이 ≤ 100</li>
 <li><code>included</code>에는 true가 적어도 하나 존재합니다.</li>
 </ul>
