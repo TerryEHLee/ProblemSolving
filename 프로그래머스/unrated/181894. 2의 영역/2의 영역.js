@@ -1,22 +1,19 @@
 function solution(arr) {
-  let indices = [];
-  
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] === 2) {
-      indices.push(i);
+    var answer = [];
+    let id = []
+    
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i] === 2) {
+            id.push(i)
+        }
     }
-  }
-  
-  if (indices.length === 0) {
-    return [-1];
-  }
-  
-  if (indices.length === 1) {
-    return [2];
-  }
-  
-  const start = indices[0];
-  const end = indices[indices.length - 1];
-  
-  return arr.slice(start, end + 1);
+        switch (id.length) {
+            case 1: answer.push(2)
+                break
+            case 0: answer.push(-1)
+                break
+                default: answer = (arr.slice(id[0], id[id.length - 1] + 1))
+        }
+    
+    return answer;
 }
