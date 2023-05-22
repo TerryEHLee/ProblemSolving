@@ -1,7 +1,8 @@
 function solution(numLog) {
     var answer = '';
+    
     for (i = 1; i < numLog.length; i++) {
-        switch (numLog[i] - numLog[i-1]) {
+        switch (numLog[i] - numLog[i - 1]) {
             case 1: answer += 'w'
                 break
             case -1: answer += 's'
@@ -9,6 +10,7 @@ function solution(numLog) {
             case 10: answer += 'd'
                 break
             case -10: answer += 'a'
+                break
         }
     }
     return answer;
