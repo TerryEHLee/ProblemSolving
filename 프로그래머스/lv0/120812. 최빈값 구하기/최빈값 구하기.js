@@ -1,22 +1,21 @@
 function solution(array) {
-    let count = {};
-    let maxCount = 0;
-    let maxnum = 0;
-    
+    var count = {}
+    var maxCnt = 0
+    var answer = 0;
+
     array.forEach(num => {
         if (count[num]) {
-            count[num]++;
+            count[num]++
         } else {
-            count[num] = 1;
+            count[num] = 1
         }
         
-        if (count[num] > maxCount) {
-            maxCount = count[num];
-            maxNum = num;
-        } else if (count[num] === maxCount) {
-            maxNum = -1;
+        if (count[num] > maxCnt) {
+            maxCnt = count[num]
+            answer = num
+        } else if (count[num] === maxCnt) {
+            answer = -1;
         }
-    }
-                 )
-        return maxNum;
+    })
+    return answer;
 }
