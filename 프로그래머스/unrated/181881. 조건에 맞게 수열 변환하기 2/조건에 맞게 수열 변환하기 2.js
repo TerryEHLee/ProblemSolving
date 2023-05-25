@@ -1,25 +1,13 @@
 function solution(arr) {
-    var count = 0;
+    var answer = 0;
     
-    while (true) {
-        var nextArr = arr.map(function(num) {
-            if (num >= 50 && num % 2 === 0) {
-                return num / 2;
-            } else if (num < 50 && num % 2 === 1) {
-                return num * 2 + 1;
-            } else {
-                return num;
-            }
-        });
-        
-        count++;
-        
-        if (nextArr.every(function(num, index) { return num === arr[index]; })) {
-            break;
-        }
-        
-        arr = nextArr;
+    while(!arr.every(ele => (ele < 50 && ele % 2 === 0) || (ele >= 50 && ele % 2 === 1))) {
+        arr = arr.map(ele => {
+            return ele >= 50 && ele % 2 === 0 ? ele / 2:
+                    ele < 50 && ele % 2 === 1 ? ele * 2 + 1 :
+                    ele
+        })
+        answer++
     }
-    
-    return count - 1;
+    return answer;
 }
