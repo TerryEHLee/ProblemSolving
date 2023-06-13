@@ -1,19 +1,16 @@
 function solution(arr) {
     var answer = [];
-    let id = []
+    let twos = [];
     
-    for (i = 0; i < arr.length; i++) {
-        if (arr[i] === 2) {
-            id.push(i)
-        }
+    arr.forEach((ele, i) => {
+        ele === 2 && twos.push(i)
+    })
+    
+    switch (twos.length) {
+        case 1: answer = [2]; break
+        case 0: answer = [-1]; break
+        default:
+            answer = arr.slice(twos[0], twos[twos.length-1] + 1)
     }
-        switch (id.length) {
-            case 1: answer.push(2)
-                break
-            case 0: answer.push(-1)
-                break
-                default: answer = (arr.slice(id[0], id[id.length - 1] + 1))
-        }
-    
     return answer;
 }
