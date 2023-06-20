@@ -1,12 +1,11 @@
 function solution(arr) {
     var answer = [];
     
-    for (i = 0; i < arr.length; i++) {
-        if (arr[i] % 2 === 0 && arr[i] > 49) {
-            arr[i] /= 2
-        } else if (arr[i] % 2 ===1 && arr[i] < 50) {
-            arr[i] *= 2;
-        }
-    }
-    return arr;
+    arr.forEach(num => {
+        num % 2 === 0 && num >= 50 ?
+            answer.push(num/2) :
+        num % 2 === 1 && num < 50 ?
+            answer.push(num*2) : answer.push(num)
+    })
+    return answer;
 }
