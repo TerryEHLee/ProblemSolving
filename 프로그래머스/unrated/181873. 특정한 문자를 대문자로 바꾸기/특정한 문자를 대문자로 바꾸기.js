@@ -1,10 +1,10 @@
 function solution(my_string, alp) {
-    var answer = my_string.split('');
+    var answer = '';
     
-    for (i = 0; i < my_string.length; i++) {
-        if (my_string[i] === alp) {
-            answer[i] = alp.toUpperCase()
-        } 
-    }
-    return answer.join('');
+    [...my_string].forEach(str => {
+        str === alp ?
+            answer += String(str.toUpperCase()):
+        answer += String(str)
+    })
+    return answer;
 }
