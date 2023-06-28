@@ -1,9 +1,10 @@
 function solution(myString) {
     var answer = [];
-    var num = myString.split('x')
+    let arr = myString.split('x')
     
-    num.forEach(ele => {
-        answer.push(ele.length)
+    arr.forEach(a => {
+        answer.push(a.length)
     })
+    
     return answer;
 }
