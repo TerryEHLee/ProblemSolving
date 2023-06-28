@@ -1,8 +1,8 @@
 function solution(rny_string) {
     var answer = '';
     
-    for (i = 0; i < rny_string.length; i++) {
-       answer += rny_string[i] === 'm' ? 'rn' : rny_string[i]
+    for (str in rny_string) {
+        answer += rny_string[str] === 'm' ? 'rn' : rny_string[str]
     }
     return answer;
 }
