@@ -4,14 +4,14 @@ function solution(strArr) {
     let max = 0;
     
     strArr.forEach(ele => {
-        let length = ele.length
+        let length = ele.length;
         obj[length] = obj[length] ? ++obj[length] : 1
-    })
+    })    
     
     for (item in obj) {
-        obj[item] > max ? max = obj[item] : max
+        max = obj[item] > max ? obj[item] : max
     }
     
-    answer = max
+    answer = max;
     return answer;
 }
