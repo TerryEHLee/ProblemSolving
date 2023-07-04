@@ -1,15 +1,15 @@
 function solution(strArr) {
     var answer = 0;
     let obj = {};
+    let max = 0;
     
     strArr.forEach(ele => {
-        const leng = ele.length;
-       obj[leng] = obj[leng] ? ++obj[leng] : 1
+        let length = ele.length
+        obj[length] = obj[length] ? ++obj[length] : 1
     })
     
-    let max = 0;
-    for (leng in obj) {
-        max = obj[leng] > max ? obj[leng] : max
+    for (item in obj) {
+        obj[item] > max ? max = obj[item] : max
     }
     
     answer = max
