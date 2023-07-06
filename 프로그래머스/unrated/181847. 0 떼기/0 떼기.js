@@ -1,11 +1,12 @@
 function solution(n_str) {
     var answer = '';
-    let i = 0;
+    let ind = 0;
     
-    while (n_str[i] === '0') {
-        i ++;
+    while (n_str[ind] === '0') {
+        ind++
     }
     
-    answer = n_str.slice(i)
+    answer = n_str.slice(ind)
+    
     return answer;
 }
