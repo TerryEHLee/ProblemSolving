@@ -1,15 +1,12 @@
 function solution(n) {
-  const arr = [];
-
-  for (let i = 0; i < n; i++) {
-    const row = [];
-
-    for (let j = 0; j < n; j++) {
-      row.push(i === j ? 1 : 0);
+    var answer = [];
+    
+    for (i = 0; i < n; i++) {
+        let arr = [];
+        for (j = 0; j < n; j++) {
+            arr.push(i === j ? 1 : 0);
+        }
+        answer.push(arr)
     }
-
-    arr.push(row);
-  }
-
-  return arr;
+    return answer;
 }
