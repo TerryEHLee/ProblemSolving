@@ -1,13 +1,11 @@
 function solution(board, k) {
-  var answer = 0;
-
-  board.forEach((boa, i) => {
-    boa.forEach((ele, j) => {
-      if (i + j <= k) {
-        answer += ele;
-      }
-    });
-  });
-
-  return answer;
+    var answer = 0;
+    
+    board.forEach((ind, i)=> {
+        ind.forEach((id, j) => {
+            i + j <= k ? answer += id : answer;
+        })
+    }) 
+    
+    return answer;
 }
