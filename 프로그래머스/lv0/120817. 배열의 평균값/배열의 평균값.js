@@ -1,8 +1,12 @@
 function solution(numbers) {
-    let answer = 0;
-    for (i = 0; i < numbers.length; i++) {
-        answer += numbers[i]/numbers.length
-    }
+    var answer = 0
+    let sum = 0;
+    
+   numbers.forEach((v) => {
+       sum += v
+   })
+    
+    answer = sum/numbers.length
     
     return answer;
 }
