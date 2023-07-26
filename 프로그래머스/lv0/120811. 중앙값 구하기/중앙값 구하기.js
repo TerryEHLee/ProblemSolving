@@ -1,10 +1,10 @@
 function solution(array) {
+    var answer = 0;
+    let index = parseInt(array.length/2)
     
-    array = array.sort(function(a, b) {
-               return a - b;
-               });
+    sortedArray = array.sort((a,b)=>a-b)
+    answer = sortedArray[index]
     
-    middleIndex = parseInt(array.length/2)
     
-    return array[middleIndex];
+    return answer;
 }
