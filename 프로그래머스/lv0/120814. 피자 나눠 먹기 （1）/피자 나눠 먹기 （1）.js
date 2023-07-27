@@ -1,9 +1,6 @@
 function solution(n) {
-    if (n % 7 === 0) {
-        answer = n / 7; 
-    } else {
-        answer = parseInt(n / 7) + 1;
-    }
+    var answer = 0;
     
+    answer = Math.ceil(n/7)
     return answer;
 }
