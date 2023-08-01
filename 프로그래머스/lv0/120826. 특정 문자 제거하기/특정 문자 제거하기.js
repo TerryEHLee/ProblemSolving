@@ -1,9 +1,6 @@
 function solution(my_string, letter) {
     var answer = '';
-    for (i = 0; i < my_string.length; i++) {
-        if (my_string[i] !== letter) {
-            answer += my_string[i]
-        } 
-    }
-    return answer;
+    
+    answer = [...my_string].filter(str=> str !== letter)
+    return answer.join('');
 }
