@@ -1,21 +1,16 @@
 function solution(angle) {
     var answer = 0;
+    
     switch (true) {
-        case (0 < angle && angle < 90):
-            answer = 1;
-            break; 
-        case (angle === 90):
-            answer = 2;
+        case (angle > 0 && angle < 90): answer = 1;
             break;
-        case (90 < angle && angle < 180):
-            answer = 3;
+        case (angle === 90): answer = 2;
             break;
-        case (angle === 180):
-            answer = 4;
+        case (angle > 90 && angle < 180): answer = 3;
             break;
-        default: 
-            answer = -1;
+        case (angle === 180): answer = 4
             break;
+        default: answer
     }
     return answer;
 }
