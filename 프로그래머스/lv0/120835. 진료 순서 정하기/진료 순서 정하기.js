@@ -1,13 +1,10 @@
 function solution(emergency) {
     var answer = [];
-    for (i = 0; i < emergency.length; i++) {
-        var count = 0;
-        for (j = 0; j < emergency.length; j++) {
-            if (emergency[i] < emergency[j]) {
-                count++;
-            }  
-        }
-        answer.push(count + 1);
-    }
+    let arr = emergency.slice().sort((a,b) => b - a)
+    
+    // for (i = 0; i < emergency.length; i++) {
+    //     answer.push(emergency[i].indexOf(arr[i]))
+    // }
+    answer = emergency.map(ele => arr.indexOf(ele)+1)
     return answer;
 }
