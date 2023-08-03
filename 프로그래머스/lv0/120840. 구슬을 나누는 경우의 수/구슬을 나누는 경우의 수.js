@@ -1,8 +1,17 @@
 function solution(balls, share) {
-  let answer = 1;
-  for (let i = 0; i < share; i++) {
-    answer *= balls - i;
-    answer /= i + 1;
-  }
-  return answer;
+    var answer = 1;
+    
+    for (i = 1; i <= balls; i++) {
+        answer*=i
+    }
+    
+    for (ia = 1; ia <= share; ia++) {
+        answer /= ia 
+    }
+    
+    for (id = 1; id <= balls-share; id++) {
+        answer /= id
+    }
+    
+    return Math.round(answer);
 }
