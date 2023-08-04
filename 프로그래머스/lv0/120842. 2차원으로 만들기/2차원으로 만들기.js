@@ -1,7 +1,9 @@
 function solution(num_list, n) {
-    var answer = [[]];
-    for (i = 0; i < num_list.length; i=i+0) {
-        array.push(num_list.splice(i,n))
+    var answer = [];
+
+    while(num_list.length) {
+        answer.push(num_list.splice(0,n));
     }
+
     return answer;
 }
