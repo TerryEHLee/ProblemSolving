@@ -1,8 +1,16 @@
 function solution(numbers, k) {
     var answer = 0;
-    for (i = 0; i <= 1000000; i++) {
-        numbers.push(numbers[i])
+    let arr = [];
+    
+    for (i = 0; i < k; i++) {
+        numbers.forEach(num => {
+            arr.push(num)
+        })
+        
     }
-        answer = numbers[2 * k - 2]   
+    
+    
+    answer = arr[2*k-2]
     return answer;
 }
+
