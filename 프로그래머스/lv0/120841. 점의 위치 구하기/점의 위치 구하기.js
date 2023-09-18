@@ -12,3 +12,4 @@ function solution(dot) {
     }
     return answer;
 }
+//
