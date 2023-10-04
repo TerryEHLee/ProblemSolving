@@ -6,9 +6,10 @@ function solution(score) {
         for(let j=0; j<score.length; j++){ 
             if((score[i][0]+score[i][1]) < (score[j][0]+score[j][1])){
                 ranking++;
-            } else if((score[i][0]+score[i][1]) == (score[j][0]+score[j][1])){
-                continue;
             } 
+            // else if((score[i][0]+score[i][1]) == (score[j][0]+score[j][1])){
+            //     continue;
+            // } 
 
         } 
         answer.push(ranking);
