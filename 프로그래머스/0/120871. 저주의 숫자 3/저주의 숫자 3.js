@@ -1,14 +1,18 @@
 function solution(n) {
-    let tenBaseNumber = 1, townNumber = 1
-
-    while(n>tenBaseNumber){
-        tenBaseNumber++
+    
+    let townNumber = 1;
+    let Number = 1;
+    
+    
+    while(n > Number) {
+        Number++;
         townNumber++
-
-        while(townNumber % 3 === 0 || String(townNumber).includes('3')){
-            townNumber++
-        }
+    
+    
+    while(townNumber % 3 === 0 || String(townNumber).includes('3')) {
+        townNumber++
     }
-
-    return townNumber
+    }
+    var answer = townNumber;
+    return answer;
 }
