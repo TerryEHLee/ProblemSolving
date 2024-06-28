@@ -1,14 +1,14 @@
 function solution(s) {
-    let result = [];
-    for (let i = 0; i < s.length; i++) {
-        let pos = -1;
-        for (let j = i - 1; j >= 0; j--) {
-            if (s[i] === s[j]) {
-                pos = i - j;
-                break;
-            }
+    var answer = [];
+    let hash = {};
+    
+    [...s].forEach((str, idx) => {
+        if (hash[str] !== undefined) {
+            answer.push(idx - hash[str]);
+        } else {
+            answer.push(-1);
         }
-        result.push(pos === -1 ? -1 : pos);
-    }
-    return result;
+        hash[str] = idx; // 현재 문자의 인덱스를 저장
+    });
+    return answer;
 }
